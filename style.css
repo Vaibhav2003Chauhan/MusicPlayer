@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url("https://i0.wp.com/cdnb.artstation.com/p/assets/images/images/019/170/273/large/ford-nguyen-city-street.jpg?1562315890");
+    object-fit: fill;
+    background-repeat: no-repeat;
+   
+}
+
+
+.maincard {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   ;
+
+ 
+}
+
+.songcard {
+    width: 30%;
+    height: 80%;
+    border: 2px solid red;
+    padding: 20px 20px;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    border:2px solid rgb(255, 255,255 ,.2);
+    border-radius: 9px;
+       
+
+}
+
+.image {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image>div>img {
+  
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    animation: moveimage 3s linear infinite reverse;
+}
+
+@keyframes moveimage {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.musicinfo {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.songname {
+    font-size: 24px;
+    color:whitesmoke
+
+}
+
+.artist {
+    font-size: 18px;
+    margin-top: 8px;
+    color: whitesmoke
+}
+ /*status bar small rotate  */
+.loader {
+    width: 18px;
+    height: 18px;
+    background: #f4eeee;
+    display: block;
+    margin-top:-10px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    animation: rotationBack  5s linear infinite reverse;
+    
+}
+
+.loader::before {
+    content: '';
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: rgb(255, 255, 255);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.loader::after {
+    content: '';
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: rgb(18, 18, 18);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ @keyframes rotationBack {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-left: 100%;
+       
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+        margin-left: 0%;
+       
+    }
+} 
+.loadingtime{
+    border:2px solid whitesmoke;
+    height:2px;
+    text-align: right;
+    margin-top:30px
+}
+/* buttons css */
+
+.button {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: linear-gradient(30deg, rgb(255, 130, 0) 20%, rgb(255, 38, 0) 80%);
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+    animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
+    align-items: center;
+    border: 0;
+}
+
+.button:is(:hover, :focus) {
+    transform: scale(1.2);
+}
+
+@keyframes pulse {
+    100% {
+        box-shadow: 0 0 0 45px rgba(193, 244, 246, 0);
+    }
+}
