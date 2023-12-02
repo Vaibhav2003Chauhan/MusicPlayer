@@ -6,35 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="style.css">
+    <!-- fontsCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <div class="maincard">
         <div class="songcard">
-
-            <div class="image">
-                <div><img src="https://yt3.googleusercontent.com/YIBi8NVC87fMfJHfQ2O0dyzjis7tUlO7VqWLhk1lq1fkIOQTrpX_Ip7G6S_u0IJosXYSe_Z9=s900-c-k-c0x00ffffff-no-rj" alt=""></div>
+            <div class="songname">
+                <h3>NCS</h3>
             </div>
-            <div class="musicinfo">
-                <div class="songname">NCS</div>
-                <div class="artist">Generated </div>
-                <div class="loadingtime">
-                    <div class="loader"></div>
+            <div class="image">
+                <img
+                        src="https://yt3.googleusercontent.com/YIBi8NVC87fMfJHfQ2O0dyzjis7tUlO7VqWLhk1lq1fkIOQTrpX_Ip7G6S_u0IJosXYSe_Z9=s900-c-k-c0x00ffffff-no-rj"
+                        alt="">
                 </div>
-                <div class="allbuttons">
-                    <button class="button" onclick="">
-                        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
-                            <path
-                                d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-                                fill="currentColor"></path>
-                        </svg>
-                    </button>
-                </div>
-                
+
+            <div class="artist">Singer name </div>
+            <div class="loadingtime">
+                <div class="loader"></div>
+            </div>
+
+            <div class="controls">
+                <div id="back" class="icons"><i class="fa-solid fa-backward-step"></i></div>
+                <div id="play" class="icons"><i class="fa-solid fa-play"></i></div>
+                <div id="next" class="icons"><i class="fa-solid fa-forward-step"></i></div>
             </div>
 
         </div>
     </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/fontawesome.min.js"></script>
 </body>
 
 </html>

@@ -18,30 +18,30 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-   ;
+   
 
  
 }
 
 .songcard {
     width: 30%;
-    height: 80%;
+    height: 75%;
     border: 2px solid red;
     padding: 20px 20px;
     background: transparent;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     border:2px solid rgb(255, 255,255 ,.2);
     border-radius: 9px;
        
 
 }
 
-.image {
+.image{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
-.image>div>img {
+.image>img {
   
     width: 50%;
     height: 50%;
@@ -69,17 +69,21 @@ body{
 }
 
 .songname {
-    font-size: 24px;
-    color:whitesmoke
+    font-size: 28px;
+    color:whitesmoke;
+    text-align: center;
 
 }
 
 .artist {
-    font-size: 18px;
-    margin-top: 8px;
-    color: whitesmoke
+    font-size: 24px;
+    margin-top: 15px;
+    color: whitesmoke;
+    text-align: center;
 }
+
  /*status bar small rotate  */
+
 .loader {
     width: 18px;
     height: 18px;
@@ -143,35 +147,29 @@ body{
        
     }
 } 
+.controls{
+ margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
 .loadingtime{
     border:2px solid whitesmoke;
     height:2px;
     text-align: right;
-    margin-top:30px
-}
-/* buttons css */
-
-.button {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    background: linear-gradient(30deg, rgb(255, 130, 0) 20%, rgb(255, 38, 0) 80%);
-    transition: all 0.3s ease-in-out 0s;
-    box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
-    animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
-    align-items: center;
-    border: 0;
+    margin-top:40px
 }
 
-.button:is(:hover, :focus) {
-    transform: scale(1.2);
+
+.icons{
+   
+   
+    
+    text-align: center;
+    
+    background:transparent;
+}
+.icons>i {
+    font-size: 31px;
+    margin-top: 5px;
 }
 
-@keyframes pulse {
-    100% {
-        box-shadow: 0 0 0 45px rgba(193, 244, 246, 0);
-    }
-}
