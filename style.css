@@ -161,15 +161,11 @@ body{
 
 
 .icons{
-   
-   
-    
-    text-align: center;
-    
+    text-align: center; 
     background:transparent;
 }
 .icons>i {
-    font-size: 31px;
+    font-size: 34px;
     margin-top: 5px;
 }
 

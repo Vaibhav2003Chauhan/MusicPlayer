@@ -1,26 +1,13 @@
-// const music = ["Pata Nahi Kis Roop Mein Aakar_320(PagalWorld)","Taaron Ke Shehar Mein(PagalWorld)"]
-// var i=0;
+// function to play the Music 
 
-// function next()
-// { 
-//     console.log("Next music")
-//     let musicname = document.getElementById("nextmusic")
-   
-//     if(i==0)
-//     {
-//         musicname.src = "../assests/Music"+music[i]+".mp3"
-//         console.log(musicname)
-       
-//     }
-//     let nextmus=music[i+1]
-//     console.log(nextmus)
-//     musicname=`../assets/Music/${nextmus}.mp3`
-// }
+var play=document.getElementById("playmusic")
+var is_pause=false // no pause
 
-async function api()
-{
+var music =document.querySelector('audio')
 
+play.addEventListener("click",()=>{
+    play.classList.replace("fa-play","fa-pause")
+    console.log(music)
+    music.play();
 
-}
-
-api();
+})
