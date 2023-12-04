@@ -4,11 +4,12 @@
     box-sizing: border-box;
 
 }
-body{
+
+body {
     background-image: url("https://i0.wp.com/cdnb.artstation.com/p/assets/images/images/019/170/273/large/ford-nguyen-city-street.jpg?1562315890");
     object-fit: fill;
     background-repeat: no-repeat;
-   
+
 }
 
 
@@ -18,9 +19,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-   
-
- 
 }
 
 .songcard {
@@ -30,19 +28,17 @@ body{
     padding: 20px 20px;
     background: transparent;
     backdrop-filter: blur(1px);
-    border:2px solid rgb(255, 255,255 ,.2);
+    border: 2px solid rgb(255, 255, 255, .2);
     border-radius: 9px;
-       
-
 }
 
-.image{
+.image {
     text-align: center;
     margin-top: 25px;
 }
 
 .image>img {
-  
+
     width: 50%;
     height: 50%;
     border-radius: 50%;
@@ -70,7 +66,7 @@ body{
 
 .songname {
     font-size: 28px;
-    color:whitesmoke;
+    color: whitesmoke;
     text-align: center;
 
 }
@@ -82,19 +78,19 @@ body{
     text-align: center;
 }
 
- /*status bar small rotate  */
+/*status bar small rotater css  */
 
 .loader {
     width: 18px;
     height: 18px;
     background: #f4eeee;
     display: block;
-    margin-top:-10px;
+    margin-top: -10px;
     position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    animation: rotationBack  5s linear infinite reverse;
-    
+    animation: rotationBack 5s linear infinite reverse;
+
 }
 
 .loader::before {
@@ -132,40 +128,60 @@ body{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
- @keyframes rotationBack {
+@keyframes rotationBack {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         margin-left: 100%;
-       
+
     }
 
     100% {
         -webkit-transform: rotate(-360deg);
         transform: rotate(-360deg);
         margin-left: 0%;
-       
+
     }
-} 
-.controls{
- margin-top: 50px;
+}
+
+.controls {
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
 }
-.loadingtime{
-    border:2px solid whitesmoke;
-    height:2px;
+
+.loadingtime {
+    border: 2px solid whitesmoke;
+    height: 2px;
     text-align: right;
-    margin-top:40px
+    margin-top: 40px
 }
 
 
-.icons{
-    text-align: center; 
-    background:transparent;
+.icons {
+    text-align: center;
+    background: transparent;
+    color: whitesmoke;
 }
+
 .icons>i {
     font-size: 34px;
     margin-top: 5px;
 }
 
+@media screen and (max-width:600px) {
+    .songcard{
+        width:80%;
+        height:60%;
+    }
+}
+@media screen and (max-width:750px) and (min-width:600px){
+    .songcard {
+        width: 70%
+    }
+}
+@media screen and (max-width:1200px) and (min-width:750px){
+    .songcard {
+        width: 50%
+    }
+}
