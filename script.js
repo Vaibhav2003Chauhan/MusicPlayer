@@ -1,35 +1,36 @@
 // function to play the Music 
-let songnames = [
+let songs = [
     {
-        'artist': '',
-        'songname': 'Pata Nahi Kis Roop'
+        artist: 'hbdajholgfUAJDEF',
+        songname: 'Pata Nahi Kis Roop'
+    },
+
+    {
+
+        artist: 'NULL',
+        songname: 'TarrokaSeher'
     }
 ]
 var play = document.getElementById("playmusic")
 var is_pause = false // no pause
-var next=document.getElementById('nextmusic')
+var next = document.getElementById('nextmusic')
+var prev=document.getElementById('previous')
+let musicname = document.querySelector('h3');
+let artistname=document.getElementsByClassName("artist");
+var songindex=0
+// console.log("nodd")
+
 
 var music = document.querySelector('audio')
 
 
 play.addEventListener("click", () => {
-    // this will display the Name of song
-    let songname = document.querySelector('h3')
-    songname.innerHTML = 'Pata Nahi Kis Roop'
-
-    let artist = document.querySelector('.artist')
-    artist.innerHTML="vaibhav"
-
-    // console.log(artist)
-  
-    if (is_pause == false) {
+        if (is_pause == false) {
         is_pause = true
         play.classList.replace("fa-play", "fa-pause")
         console.log("pause")
         music.play();
     }
-
-
     else {
         is_pause = false
         play.classList.replace("fa-pause", "fa-play")
@@ -41,7 +42,16 @@ play.addEventListener("click", () => {
     console.log(music)
 })
 
-next.addEventListener('click',()=>
+function loadmusic(songs)
 {
-    
+  musicname.innerHTML=songs[songindex].songname;
+  artistname[0].innerHTML = songs[songindex].artist
+  
+}
+loadmusic(songs)
+
+next.addEventListener('click', () => {
+    is_pause = true
+
+
 })
