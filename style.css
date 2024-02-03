@@ -42,7 +42,10 @@ body {
     width: 50%;
     height: 50%;
     border-radius: 50%;
-    animation: moveimage 6s linear infinite reverse;
+   
+}
+.rotate{
+    animation: moveimage 4s linear infinite reverse;
 }
 
 @keyframes moveimage {
@@ -182,6 +185,7 @@ body {
 }
 @media screen and (max-width:1200px) and (min-width:750px){
     .songcard {
-        width: 50%
+        width: 50%;
+        height: 50%;
     }
 }
